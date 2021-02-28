@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="usersBackPane" onMouseClicked="#backUserToNull" prefHeight="681.0" prefWidth="906.0" stylesheets="@../CSS_files/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.UsersController">
+   <children>
+      <TableView fx:id="table" layoutX="202.0" layoutY="126.0" onMouseClicked="#chooseUser" prefHeight="430.0" prefWidth="502.0">
+         <columns>
+            <TableColumn fx:id="ime" prefWidth="116.0" text="Ime" />
+            <TableColumn fx:id="prezime" prefWidth="167.0" text="Prezime" />
+            <TableColumn fx:id="visina" prefWidth="112.0" text="Visina" />
+            <TableColumn fx:id="težina" prefWidth="105.0" text="Težina" />
+         </columns>
+      </TableView>
+      <Label fx:id="userDataLbl" alignment="CENTER_RIGHT" layoutX="656.0" layoutY="32.0" prefHeight="20.0" prefWidth="174.0" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="14.0" layoutY="605.0" text="BACK" textAlignment="RIGHT">
+         <graphic>
+            <FontAwesomeIcon fill="#253243" iconName="ANGLE_LEFT" size="5em" />
+         </graphic>
+      </JFXButton>
+      <FontAwesomeIcon fill="#253243" iconName="USER" layoutX="839.0" layoutY="57.0" size="3.5em" />
+   </children>
+</AnchorPane>

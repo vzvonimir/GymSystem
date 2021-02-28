@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="usersBackPane" prefHeight="681.0" prefWidth="906.0" stylesheets="@../CSS_files/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.AllTrenersController">
+   <children>
+      <TableView fx:id="table" layoutX="202.0" layoutY="126.0" prefHeight="430.0" prefWidth="502.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="47.200011253356934" text="ID" />
+            <TableColumn fx:id="ime" prefWidth="138.3999481201172" text="Ime" />
+            <TableColumn fx:id="prezime" prefWidth="157.60003662109375" text="Prezime" />
+            <TableColumn fx:id="vrsta" prefWidth="157.5999755859375" text="Vrsta" />
+         </columns>
+      </TableView>
+      <Label fx:id="userDataLbl" alignment="CENTER_RIGHT" layoutX="656.0" layoutY="32.0" prefHeight="20.0" prefWidth="174.0" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="14.0" layoutY="605.0" onMouseClicked="#Back" text="BACK" textAlignment="RIGHT">
+         <graphic>
+            <FontAwesomeIcon fill="#253243" iconName="ANGLE_LEFT" onMouseClicked="#Back" size="5em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIcon fill="#253243" iconName="USER" layoutX="839.0" layoutY="57.0" size="3.5em" />
+   </children>
+</AnchorPane>

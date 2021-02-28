@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="usersBackPane" prefHeight="681.0" prefWidth="906.0" stylesheets="@../CSS_files/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.UplateController">
+   <children>
+      <TableView fx:id="table" layoutX="14.0" layoutY="144.0" onMouseClicked="#chooseUser" prefHeight="430.0" prefWidth="502.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="47.200011253356934" text="ID" />
+            <TableColumn fx:id="username" prefWidth="152.00000381469727" text="Username" />
+            <TableColumn fx:id="datum" minWidth="2.39996337890625" prefWidth="171.1999969482422" text="Datum uplate" />
+            <TableColumn fx:id="period" prefWidth="132.0" text="Period" />
+         </columns>
+      </TableView>
+      <Label fx:id="userDataLbl" alignment="CENTER_RIGHT" layoutX="656.0" layoutY="32.0" prefHeight="20.0" prefWidth="174.0" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="537.0" layoutY="144.0" prefHeight="430.0" prefWidth="354.0" style="-fx-background-color: #F2F4FF;" styleClass="pane" stylesheets="@../CSS_files/app.css">
+         <children>
+            <JFXButton fx:id="saveBtn" layoutX="246.0" layoutY="379.0" onAction="#save" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #253243;" text="Save" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="31.0" layoutY="30.0" text="Username:" textFill="#272727">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="usernameTxt" layoutX="31.0" layoutY="50.0" prefHeight="36.0" prefWidth="174.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="128.0" text="Payment Date" textFill="#272727">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="221.0" text="Payment Plan" textFill="#272727">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="planTxt" layoutX="34.0" layoutY="241.0" prefHeight="30.0" prefWidth="174.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <DatePicker fx:id="datumTxt" layoutX="30.0" layoutY="148.0" prefHeight="30.0" prefWidth="174.0" />
+         </children>
+      </Pane>
+      <JFXButton layoutX="14.0" layoutY="605.0" onMouseClicked="#Back" text="BACK" textAlignment="RIGHT">
+         <graphic>
+            <FontAwesomeIcon fill="#253243" iconName="ANGLE_LEFT" onMouseClicked="#Back" size="5em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIcon fill="#253243" iconName="USER" layoutX="839.0" layoutY="57.0" size="3.5em" />
+   </children>
+</AnchorPane>

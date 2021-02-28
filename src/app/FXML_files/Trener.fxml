@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="home" prefHeight="681.0" prefWidth="906.0" stylesheets="@../CSS_files/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller.TrenerController">
+   <children>
+      <Label fx:id="userDataLbl" alignment="CENTER_RIGHT" layoutX="660.0" layoutY="52.0" prefHeight="20.0" prefWidth="174.0" textAlignment="RIGHT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="users" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="218.0" layoutY="321.0" onAction="#moveToPopis" prefHeight="114.0" prefWidth="128.0" style="-fx-background-color: white;" text="Users">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="#253243" iconName="USER" size="4em" text="">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIcon>
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="389.0" layoutY="321.0" prefHeight="114.0" prefWidth="128.0" style="-fx-background-color: white;" text="Calendar">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="#253243" iconName="CALENDAR" size="4em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="561.0" layoutY="321.0" onAction="#moveToSettings" prefHeight="114.0" prefWidth="128.0" style="-fx-background-color: white;" text="Settings">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIcon fill="#253243" iconName="SLIDERS" size="4em" />
+         </graphic>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="65.0" layoutY="32.0" prefHeight="60.0" prefWidth="199.0" text="Gym System">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#253243" iconName="XING" layoutX="38.0" layoutY="83.0" size="5em" wrappingWidth="62.4000244140625" />
+      <FontAwesomeIcon fill="#253243" iconName="USER" layoutX="845.0" layoutY="77.0" size="3.5em" />
+      <FontAwesomeIcon fx:id="logout" fill="#253243" iconName="SIGN_OUT" layoutX="834.0" layoutY="657.0" onMouseClicked="#Logout" size="5em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIcon>
+      <Label layoutX="770.0" layoutY="627.0" text="SIGN OUT" />
+   </children>
+</AnchorPane>
